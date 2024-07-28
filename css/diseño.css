@@ -1,0 +1,187 @@
+/* Reset general de margenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+.nav-item {
+    position: relative;
+}
+/* Botones */
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* Titulo */
+.titulo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.card {
+    color: rgb(35, 143, 231);
+    background-color: rgb(235, 234, 234);
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position:relative;
+    z-index: 2;
+}
+.row {
+    color: rgb(35, 143, 231);
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.img-fluid {
+    margin: 10px;
+    border-radius: 10px;
+}
+#centro{
+    width: 700px;
+}
+#final{
+    width: 300px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Texto de las tarjetas */
+.card-text {
+    color: #495057;
+}
+
+.texto-mio, #proyecto1, #proyecto2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .container-flexible {
+        padding-top: 20px; 
+    }
+
+    .carousel-inner {
+        width: 90%; 
+    }
+}
+
+/* Ajusta el tamaño de las imágenes en pantallas grandes y extra grandes */
+@media (min-width: 992px) {
+    .card img {
+        width: 100%; 
+    }
+    .img-fluid {
+        width: 100%; 
+    }
+}
+/* Video de fondo */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+}
+
+.capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+/* Asegurar que el contenido este por encima del video */
+main {
+    position: relative;
+    z-index: 2;
+    padding-top: 70px; /* Espacio para el navbar */
+}
+.titulo{
+    color: rgb(255, 255, 255);
+}
+
+.go-top-container{
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+}
+.go-top-button{
+    width: 0rem;
+    height: 0rem;
+    background: #2071b2;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.go-top-button i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+.show{
+    z-index: 10;
+}
+.show .go-top-button{
+    animation: popup .3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: 11;
+}
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 8rem;
+        height: 8rem;
+    }
+    100%{
+        width: 6.6rem;
+        height: 6.6rem;
+    }
+}
