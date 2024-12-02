@@ -75,7 +75,7 @@ body {
     color: #495057;
 }
 
-.texto-mio, #proyecto1, #proyecto2 {
+.texto-mio, #proyecto1, #proyecto2, #proyecto3 {
     display: flex;
     justify-content: center;
     align-items: center;
